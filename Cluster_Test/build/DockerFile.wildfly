@@ -1,0 +1,4 @@
+FROM quay.io/wildfly/wildfly:34.0.1.Final-jdk11
+
+COPY --chown=jboss:jboss ./app /opt/jboss/wildfly/standalone/deployments/app.war
+RUN touch /opt/jboss/wildfly/standalone/deployments/app.war.dodeploy
